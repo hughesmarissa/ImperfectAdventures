@@ -9,267 +9,7 @@ html{
 }
 
 
-        /*------------- NAVIGATION STYLES---------*/
-        @import 'https://fonts.googleapis.com/css?family=Raleway';
-
-        
-        div.container
-        {
-            max-width: 1200px;
-            font-family: Raleway;
-            padding: 1em 3em;
-            text-align: center;  
-            
-        }
-        
-        div.container a
-        {
-            color: #FFF;
-            text-decoration: none;
-            font: 20px Raleway;
-            margin: 0px 10px;
-            padding: 10px 10px;
-            position: relative;
-            z-index: 0;
-            cursor: pointer;
-        }
-        
-      
-        .cyan
-        {
-            background: #00bcd4;
-        }
-        
-        
-        
-        /* Top and Bottom borders go out */
-        div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
-        {
-            position: absolute;
-            left: 0px;
-            width: 100%;
-            height: 2px;
-            background: #FFF;
-            content: "";
-            opacity: 0;
-            transition: all 0.3s;
-        }
-        
-        div.topBotomBordersOut a:before
-        {
-            top: 0px;
-            transform: translateY(10px);
-        }
-        
-        div.topBotomBordersOut a:after
-        {
-            bottom: 0px;
-            transform: translateY(-10px);
-        }
-        
-        div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
-        {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-        
-        /* Top and Bottom borders come in */
-        div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
-        {
-            position: absolute;
-            left: 0px;
-            width: 100%;
-            height: 2px;
-            background: #FFF;
-            content: "";
-            opacity: 0;
-            transition: all 0.3s;
-        }
-        
-        div.topBotomBordersIn a:before
-        {
-            top: 0px;
-            transform: translateY(-10px);
-        }
-        
-        div.topBotomBordersIn a:after
-        {
-            bottom: 0px;
-            transform: translateY(10px);
-        }
-        
-        div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
-        {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-        
-        /* Top border go down and Left border appears */
-        div.topLeftBorders a:before
-        {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 2px;
-            height: 0px;
-            background: #FFF;
-            content: "";
-            opacity: 1;
-            transition: all 0.3s;
-        }
-        
-        div.topLeftBorders a:after
-        {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 2px;
-            background: #FFF;
-            content: "";
-            opacity: 1;
-            transition: all 0.3s;
-        }
-        
-        div.topLeftBorders a:hover:before
-        {
-            height: 100%;
-        }
-        
-        div.topLeftBorders a:hover:after
-        {
-            opacity: 0;
-            top: 100%;
-        }
-        
-        /* Circle behind */
-        div.circleBehind a:before, div.circleBehind a:after
-        {
-            position: absolute;
-            top: 22px;
-            left: 50%;
-            width: 50px;
-            height: 50px;
-            border: 4px solid #0277bd;
-            transform: translateX(-50%) translateY(-50%) scale(0.8);
-            border-radius: 50%;
-            background: transparent;
-            content: "";
-            opacity: 0;
-            transition: all 0.3s;
-            z-index: -1;
-        }
-        
-        div.circleBehind a:after
-        {
-            border-width: 2px;
-            transition: all 0.4s;
-        }
-        
-        div.circleBehind a:hover:before
-        {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-50%) scale(1);
-        }
-        
-        div.circleBehind a:hover:after
-        {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-50%) scale(1.3);
-        }
-        
-        /* Brackets go out */
-        div.brackets a:before, div.brackets a:after
-        {
-            position: absolute;
-            opacity: 0;
-            font-size: 35px;
-            top: 0px;
-            transition: all 0.3s;
-        }
-        
-        div.brackets a:before
-        {
-            content: '(';
-            left: 0px;
-            transform: translateX(10px);
-        }
-        
-        div.brackets a:after
-        {
-            content: ')';
-            right: 0px;
-            transform: translateX(-10px);
-        }
-        
-        div.brackets a:hover:before, div.brackets a:hover:after
-        {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-        
-        
-        /* Border from Y to X  */
-        div.borderYtoX a:before, div.borderYtoX a:after
-        {
-            position: absolute;
-            opacity: 0.5;
-            height: 100%;
-            width: 2px;
-            content: '';
-            background: #FFF;
-            transition: all 0.3s;
-        }
-        
-        div.borderYtoX a:before
-        {
-            left: 0px;
-            top: 0px;
-        }
-        
-        div.borderYtoX a:after
-        {
-            right: 0px;
-            bottom: 0px;
-        }
-        
-        div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
-        {
-            opacity: 1;
-            height: 2px;
-            width: 100%;
-        }
-        
-        /* Border X get width  */
-        div.borderXwidth a:before, div.borderXwidth a:after
-        {
-            position: absolute;
-            opacity: 0;
-            width: 0%;
-            height: 2px;
-            content: '';
-            background: #FFF;
-            transition: all 0.3s;
-        }
-        
-        div.borderXwidth a:before
-        {
-            left: 0px;
-            top: 0px;
-        }
-        
-        div.borderXwidth a:after
-        {
-            right: 0px;
-            bottom: 0px;
-        }
-        
-        div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
-        {
-            opacity: 1;
-            width: 100%;
-        }
-        
+     
         
         
         
@@ -298,68 +38,17 @@ body {
 	background: #eeeeee;
 	font-family: 'Varela Round', sans-serif;
 }
-.navbar {
-	color: #fff;
-	background: #926dde !important;
-	padding: 5px 16px;
-	border-radius: 0;
-	border: none;
-	box-shadow: 0 0 4px rgba(0,0,0,.1);
-}
-.navbar img {
-	border-radius: 50%;
-	width: 36px;
-	height: 36px;
-	margin-right: 10px;
-}
-.navbar .navbar-brand {
-	color: #efe5ff;
-	padding-left: 0;
-	padding-right: 50px;
-	font-size: 24px;		
-}
+
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 	color: #fff;
 }
 .navbar .navbar-brand i {
 	font-size: 25px;
 	margin-right: 5px;
+    
 }
-.search-box {
-	position: relative;
-}	
-.search-box input {
-	padding-right: 35px;
-	min-height: 38px;
-	border: none;
-	background: #faf7fd;
-	border-radius: 3px !important;
-}
-.search-box input:focus {		
-	background: #fff;
-	box-shadow: none;
-}
-.search-box .input-group-addon {
-	min-width: 35px;
-	border: none;
-	background: transparent;
-	position: absolute;
-	right: 0;
-	z-index: 9;
-	padding: 10px 7px;
-	height: 100%;
-}
-.search-box i {
-	color: #a0a5b1;
-	font-size: 19px;
-}
-.navbar .nav-item i {
-	font-size: 18px;
-}
-.navbar .nav-item span {
-	position: relative;
-	top: 3px;
-}
+
+
 .navbar .navbar-nav > a {
 	color: #efe5ff;
 	padding: 8px 15px;
@@ -448,12 +137,7 @@ body {
 		box-shadow: none;
 		padding: 0;
 	}
-	.navbar .navbar-form {
-		border: none;			
-		display: block;
-		margin: 10px 0;
-		padding: 0;
-	}
+	
 	.navbar .navbar-nav {
 		margin: 8px 0;
 	}
@@ -464,3 +148,76 @@ body {
 		width: 100%;
 	}
 }
+
+
+
+
+
+/*--------FOOTER-----------*/
+section #services {
+    text-align: center;
+    transform: translatez(0);
+  }
+  section #services h2 {
+    margin: 80px 0px 40px;
+    color: #fff;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  section #services li {
+    width: 120px;
+    height: 140px;
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+  }
+  section #services li div {
+    width: 120px;
+    height: 120px;
+    color: #74d4b3;
+    font-size: 3.4em;
+    text-align: center;
+    line-height: 120px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+  }
+  section #services li a {
+    color: #77cc6d;
+  }
+  section #services li div:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+  }
+  section #services li span {
+    width: 120px;
+    height: 20px;
+    display: block;
+    padding: 15px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .credits a {
+    display: block;
+    text-align: center;
+    color: #74d4b3;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    max-width: 300px;
+  }
+
+
+
+
+
+
+
+
+
+
+
