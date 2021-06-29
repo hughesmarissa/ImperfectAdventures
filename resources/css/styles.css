@@ -5,6 +5,16 @@ html, body {
 }
 
 .family-photo {
-    margin-top: 120px;
+    margin-top: 50px;
 
+}
+.title {
+    margin-top: 10px;
+    margin-left: 80px;
+    
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.85rem;
+    letter-spacing: .75rem;
+    word-spacing: .25rem;
+    
 }
