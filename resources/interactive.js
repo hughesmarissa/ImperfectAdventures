@@ -1,3 +1,4 @@
+/*-----------------for INDEX page ----------------*/
 class StickyNavigation {
   
     constructor() {
@@ -73,3 +74,61 @@ class StickyNavigation {
   }
   
   new StickyNavigation();
+
+
+
+
+
+
+
+
+
+
+  /*------------FOR BLOG PAGE -------------------*/
+
+  const spans = document.querySelectorAll('.word span');
+
+spans.forEach((span, idx) => {
+	span.addEventListener('click', (e) => {
+		e.target.classList.add('active');
+	});
+	span.addEventListener('animationend', (e) => {
+		e.target.classList.remove('active');
+	});
+	
+	// Initial animation
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 750 * (idx+1))
+});
+
+
+
+
+
+
+
+/* ------------- FOR PAGE TRANSITIONS -------------*/
+Vue.config.productionTip = false
+
+Vue.component('start', {
+  template: '#start'
+})
+
+Vue.component('next', {
+  template: '#next'
+})
+
+new Vue({
+  el: '#app',
+  
+  data: {
+    page: 'start'
+  },
+  
+  methods: {
+    onChangePage(to) {
+      this.page = to
+    }
+  }
+})
